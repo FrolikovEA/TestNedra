@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Атрибут lang</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function myFunction() {
+        $.getJSON ('http://localhost:8081/Nedra/addClick');
+        $.getJSON('http://localhost:8081/Nedra/getCount',function (dataResp) {
+            $('#countClick').text(dataResp);
+        });
+    }
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <button type="button" onclick="myFunction()" class="btn btn-primary">Нажать</button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <label id="countClick"> </label>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
